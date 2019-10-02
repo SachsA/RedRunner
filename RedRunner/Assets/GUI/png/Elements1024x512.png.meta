@@ -2,11 +2,11 @@ fileFormatVersion: 2
 guid: 1d0648c75e5d4f445b28674b99de5ba5
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Elements1024x512_0
-    21300002: Elements1024x512_1
-    21300004: Elements1024x512_2
-    21300006: Elements1024x512_3
-    21300008: Elements1024x512_4
+    21300000: FrontDoor_DarkGrey
+    21300002: FrontDoor_Yellow
+    21300004: FrondDoor_Grey
+    21300006: Star
+    21300008: Door
     21300010: Elements1024x512_5
     21300012: Elements1024x512_6
   externalObjects: {}
@@ -52,7 +52,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 128
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -135,7 +135,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Elements1024x512_0
+      name: FrontDoor_DarkGrey
       rect:
         serializedVersion: 2
         x: 43
@@ -143,7 +143,7 @@ TextureImporter:
         width: 257
         height: 106
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -155,7 +155,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Elements1024x512_1
+      name: FrontDoor_Yellow
       rect:
         serializedVersion: 2
         x: 363
@@ -163,7 +163,7 @@ TextureImporter:
         width: 257
         height: 106
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -175,7 +175,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Elements1024x512_2
+      name: FrondDoor_Grey
       rect:
         serializedVersion: 2
         x: 683
@@ -183,7 +183,7 @@ TextureImporter:
         width: 257
         height: 106
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -195,7 +195,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Elements1024x512_3
+      name: Star
       rect:
         serializedVersion: 2
         x: 21
@@ -203,7 +203,7 @@ TextureImporter:
         width: 257
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -215,7 +215,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Elements1024x512_4
+      name: Door
       rect:
         serializedVersion: 2
         x: 320
@@ -223,7 +223,7 @@ TextureImporter:
         width: 256
         height: 238
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -243,7 +243,7 @@ TextureImporter:
         width: 236
         height: 144
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -263,7 +263,7 @@ TextureImporter:
         width: 324
         height: 144
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
