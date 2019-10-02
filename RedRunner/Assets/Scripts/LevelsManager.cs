@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelsManager : MonoBehaviour
 {
@@ -36,6 +37,11 @@ public class LevelsManager : MonoBehaviour
     #endregion
 
     #region Public Methods
+
+    public void StartGame()
+    {
+        SceneManager.LoadScene("SelectLevel");
+    }
 
     public void SetStarsCollected(string levelName, int nbStars)
     {
