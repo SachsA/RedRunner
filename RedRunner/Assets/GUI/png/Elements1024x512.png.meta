@@ -9,6 +9,11 @@ TextureImporter:
     21300008: Door
     21300010: Elements1024x512_5
     21300012: Elements1024x512_6
+    21300014: Elements1024x512_0
+    21300016: Elements1024x512_1
+    21300018: Elements1024x512_2
+    21300020: Elements1024x512_3
+    21300022: Elements1024x512_4
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -135,7 +140,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FrontDoor_DarkGrey
+      name: Elements1024x512_0
       rect:
         serializedVersion: 2
         x: 43
@@ -143,19 +148,19 @@ TextureImporter:
         width: 257
         height: 106
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7086526faf7d8794e9679bb1c797c959
+      spriteID: a0ce87a41087dac41a16233dc460e0f2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FrontDoor_Yellow
+      name: Elements1024x512_1
       rect:
         serializedVersion: 2
         x: 363
@@ -163,19 +168,19 @@ TextureImporter:
         width: 257
         height: 106
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b001daaef5632c46af0e47a36729a29
+      spriteID: a705c91e37133df469c6961342ca83f1
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FrondDoor_Grey
+      name: Elements1024x512_2
       rect:
         serializedVersion: 2
         x: 683
@@ -183,19 +188,19 @@ TextureImporter:
         width: 257
         height: 106
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ffef70806e091c4b93595b54dbcc827
+      spriteID: 965eadc673a80cc46a57ba01f5831d01
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Star
+      name: Elements1024x512_3
       rect:
         serializedVersion: 2
         x: 21
@@ -203,19 +208,19 @@ TextureImporter:
         width: 257
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: afa306d651ce2174bae345281844302f
+      spriteID: da85d83fd60422041838853e33db1c4d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Door
+      name: Elements1024x512_4
       rect:
         serializedVersion: 2
         x: 320
@@ -223,13 +228,13 @@ TextureImporter:
         width: 256
         height: 238
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fffd47d26077d344d9f1c60043c4e4b0
+      spriteID: 4c2f6799c35f93f42a0c5c1a18b52d4a
       vertices: []
       indices: 
       edges: []
@@ -243,13 +248,13 @@ TextureImporter:
         width: 236
         height: 144
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: acd4de66d6d1361469b6e51b3b5aac87
+      spriteID: 1b19bd495910f30409921141bb84e1da
       vertices: []
       indices: 
       edges: []
@@ -263,13 +268,13 @@ TextureImporter:
         width: 324
         height: 144
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e28ebdef9da51534b92ebf9d55dbace4
+      spriteID: 0bafdc08ecc7f60429a84a3cdcfd9ea8
       vertices: []
       indices: 
       edges: []
