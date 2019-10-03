@@ -21,7 +21,7 @@ public class LevelsManager : MonoBehaviour
 
     #region Private Fields
 
-    private Dictionary<string, int> starsCollected;
+    private Dictionary<string, int> starsCollected = new Dictionary<string, int>();
 
     #endregion
 
@@ -51,6 +51,15 @@ public class LevelsManager : MonoBehaviour
     public void RemoveOneLife()
     {
         Life -= 1;
+    }
+
+    public int GetStarsCollected(string levelName)
+    {
+        if (starsCollected.ContainsKey(levelName))
+        {
+            return starsCollected[levelName];
+        }
+        return 0;
     }
 
     #endregion
