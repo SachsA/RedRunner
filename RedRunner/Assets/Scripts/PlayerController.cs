@@ -30,8 +30,8 @@ public class PlayerController : MonoBehaviour
     public LayerMask whatIsGrounded;
     public Transform groundCheck;
 
-    public Transform cornerMin;
-    public Transform cornerMax;
+    public Transform cornerMin = null;
+    public Transform cornerMax = null;
 
     #endregion
 
@@ -88,6 +88,15 @@ public class PlayerController : MonoBehaviour
         {
             _animator.SetTrigger(Jump);
             _jump = false;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Enemie"))
+        {
+            LevelsManager.Instance.RemoveOneLife();
+            LevelManager.Instance.PlayerIsDead();
         }
     }
 

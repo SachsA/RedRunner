@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
@@ -29,5 +30,15 @@ public class MenuManager : MonoBehaviour
             SettingsCanvas.SetActive(false);
             MenuCanvas.SetActive(true);
         }
+    }
+
+    public void StartGame()
+    {
+        SceneManager.LoadScene("SelectLevel");
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
