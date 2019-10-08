@@ -14,14 +14,16 @@ public class LevelsManager : MonoBehaviour
 
     public static LevelsManager Instance;
 
-    // Or Private ?
-    public int Life = 5;
-
     #endregion
 
     #region Private Fields
 
     private Dictionary<string, int> starsCollected = new Dictionary<string, int>();
+
+    [SerializeField]
+    private AudioSource AudioSource;
+
+    private int Life = 5;
 
     #endregion
 
@@ -29,19 +31,29 @@ public class LevelsManager : MonoBehaviour
 
     private void Awake()
     {
-        DontDestroyOnLoad(this);
+        if (Instance == null)
+        {
+            DontDestroyOnLoad(this);
+            Instance = this;
+        } else
+        {
+            Destroy(gameObject);
+        }
+    }
 
-        Instance = this;
+    private void Start()
+    {
+        if (AudioSource.isPlaying)
+        {
+            return;
+        }
+        AudioSource.loop = true;
+        AudioSource.Play();
     }
 
     #endregion
 
     #region Public Methods
-
-    public void StartGame()
-    {
-        SceneManager.LoadScene("SelectLevel");
-    }
 
     public void SetStarsCollected(string levelName, int nbStars)
     {
@@ -51,6 +63,18 @@ public class LevelsManager : MonoBehaviour
     public void RemoveOneLife()
     {
         Life -= 1;
+        if (Life == 0)
+        {
+            // GAME OVER SCREEN (CANVAS)
+            Life = 5;
+            starsCollected.Clear();
+            SceneManager.LoadScene("Introduction");
+        }
+    }
+
+    public int GetLife()
+    {
+        return Life;
     }
 
     public int GetStarsCollected(string levelName)
