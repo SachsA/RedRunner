@@ -46,6 +46,12 @@ public class LevelManager : MonoBehaviour
             nbStars += 1;
         }
         LevelsManager.Instance.SetStarsCollected(SceneManager.GetActiveScene().name, nbStars);
+        StartCoroutine("WaitToEnd");
+    }
+
+    IEnumerator WaitToEnd()
+    {
+        yield return new WaitForSeconds(2.5f);
         SceneManager.LoadScene("SelectLevel");
     }
 
