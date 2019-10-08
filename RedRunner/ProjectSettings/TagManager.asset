@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemie
+  - Chest
+  - Coin
   layers:
   - Default
   - TransparentFX

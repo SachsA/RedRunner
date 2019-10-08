@@ -98,6 +98,14 @@ public class PlayerController : MonoBehaviour
             LevelsManager.Instance.RemoveOneLife();
             LevelManager.Instance.PlayerIsDead();
         }
+        if (collision.CompareTag("Coin"))
+        {
+            LevelManager.Instance.AddOneCoin();
+        }
+        if (collision.CompareTag("Chest"))
+        {
+            LevelManager.Instance.ChestFound();
+        }
     }
 
     #endregion
