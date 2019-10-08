@@ -57,7 +57,7 @@ public class LevelsManager : MonoBehaviour
 
     public void SetStarsCollected(string levelName, int nbStars)
     {
-        starsCollected.Add(levelName, nbStars);
+        starsCollected[levelName] = nbStars;
     }
 
     public void RemoveOneLife()
