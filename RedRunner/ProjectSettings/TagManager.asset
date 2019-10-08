@@ -4,9 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Enemie
   - Chest
   - Coin
+  - Enemy
   layers:
   - Default
   - TransparentFX

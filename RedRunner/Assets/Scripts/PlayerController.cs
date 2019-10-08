@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour
     private static readonly int Jump = Animator.StringToHash("Jump");
     private static readonly int Speed = Animator.StringToHash("Speed");
 
+    private Vector2 SavePlayerPos;
+
     #endregion
 
     #region Public Fields
@@ -48,6 +50,7 @@ public class PlayerController : MonoBehaviour
         _facingRight = true;
         _jump = false;
         _isGrounded = false;
+        SavePlayerPos = transform.position;
     }
 
     void Update()
@@ -93,17 +96,26 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemie"))
+        if (collision.CompareTag("Water"))
         {
+            transform.position = SavePlayerPos;
+            LevelsManager.Instance.RemoveOneLife();
+            LevelManager.Instance.PlayerIsDead();
+        }
+        if (collision.CompareTag("Enemy"))
+        {
+            transform.position = SavePlayerPos;
             LevelsManager.Instance.RemoveOneLife();
             LevelManager.Instance.PlayerIsDead();
         }
         if (collision.CompareTag("Coin"))
         {
+            Destroy(collision.gameObject);
             LevelManager.Instance.AddOneCoin();
         }
         if (collision.CompareTag("Chest"))
         {
+            collision.GetComponent<Animator>().SetBool("Open", true);
             LevelManager.Instance.ChestFound();
         }
     }

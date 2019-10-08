@@ -7,8 +7,6 @@ public class LevelManager : MonoBehaviour
 {
     public static LevelManager Instance;
 
-    public Transform Player;
-
     [SerializeField]
     private int TotalCoins;
     private int CollectedCoins;
@@ -23,7 +21,6 @@ public class LevelManager : MonoBehaviour
     private void Start()
     {
         PlayerDeadOnce = false;
-        SavePlayerPos = Player.position;
     }
 
     public void QuitLevel()
@@ -49,11 +46,11 @@ public class LevelManager : MonoBehaviour
             nbStars += 1;
         }
         LevelsManager.Instance.SetStarsCollected(SceneManager.GetActiveScene().name, nbStars);
+        SceneManager.LoadScene("SelectLevel");
     }
 
     public void PlayerIsDead()
     {
-        Player.position = SavePlayerPos;
         PlayerDeadOnce = true;
     }
 }
