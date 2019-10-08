@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: 09cd269570bb57e42bfc6e01bf384700, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -169,6 +169,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   groundCheck: {fileID: 7722313274699376429}
+  cornerMin: {fileID: 0}
+  cornerMax: {fileID: 0}
 --- !u!1 &7722313274699376428
 GameObject:
   m_ObjectHideFlags: 0

@@ -30,6 +30,9 @@ public class PlayerController : MonoBehaviour
     public LayerMask whatIsGrounded;
     public Transform groundCheck;
 
+    public Transform cornerMin;
+    public Transform cornerMax;
+
     #endregion
 
     #region Monobehaviour Callbacks
@@ -73,6 +76,9 @@ public class PlayerController : MonoBehaviour
 
         rigidbody.velocity = new Vector2(jumpVelocity, rigidbody.velocity.y);
 
+        // Restrict player movement
+        KeepWithinMinMaxRectangle();
+
         if (_horizontalMove > 0 && !_facingRight)
             Flip();
         else if (_horizontalMove < 0 && _facingRight)
@@ -96,6 +102,39 @@ public class PlayerController : MonoBehaviour
         Vector3 transformLocalScale = transform.localScale;
         transformLocalScale.x *= -1;
         transform.localScale = transformLocalScale;
+    }
+
+    void OnDrawGizmos()
+    {
+        Vector3 top_right = Vector3.zero; Vector3 bottom_right = Vector3.zero;
+        Vector3 bottom_left = Vector3.zero;
+        Vector3 top_left = Vector3.zero;
+        if (cornerMax && cornerMin)
+        {
+            top_right = cornerMax.position;
+            bottom_left = cornerMin.position;
+            bottom_right = top_right;
+            bottom_right.y = bottom_left.y;
+            top_left = top_right;
+            top_left.x = bottom_left.x;
+        }
+        //Set the following gizmo colors to YELLOW
+        Gizmos.color = Color.yellow;
+        //Draw 4 lines making a rectangle
+        Gizmos.DrawLine(top_right, bottom_right);
+        Gizmos.DrawLine(bottom_right, bottom_left);
+        Gizmos.DrawLine(bottom_left, top_left);
+        Gizmos.DrawLine(top_left, top_right);
+    }
+
+    void KeepWithinMinMaxRectangle()
+    {
+        float x = transform.position.x;
+        float y = transform.position.y;
+        float z = transform.position.z;
+        float clampedX = Mathf.Clamp(x, cornerMin.position.x, cornerMax.position.x);
+        float clampedY = Mathf.Clamp(y, cornerMin.position.y, cornerMax.position.y);
+        transform.position = new Vector3(clampedX, clampedY, z);
     }
 
     #endregion
