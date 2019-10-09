@@ -1155,14 +1155,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8331042e72d0c5249b7894f10314eb01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 518873651}
+  player: {fileID: 1417283936}
   cameraDistance: 120
---- !u!4 &518873651 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7722313274101068891, guid: 85acca23a89030c4fb0409bf282c9042,
-    type: 3}
-  m_PrefabInstance: {fileID: 378595094}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &551369591
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2695,6 +2689,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 964b9b62c606ec140aef391c25042c8c, type: 3}
+--- !u!1 &1417283936 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7722313274101068890, guid: 85acca23a89030c4fb0409bf282c9042,
+    type: 3}
+  m_PrefabInstance: {fileID: 378595094}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1419918153
 PrefabInstance:
   m_ObjectHideFlags: 0

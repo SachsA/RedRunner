@@ -46,7 +46,7 @@ public class LevelManager : MonoBehaviour
     public void ChestFound()
     {
         int nbStars = 1;
-        
+
         if (CollectedCoins == TotalCoins)
         {
             nbStars += 1;
@@ -56,12 +56,6 @@ public class LevelManager : MonoBehaviour
             nbStars += 1;
         }
         LevelsManager.Instance.SetStarsCollected(SceneManager.GetActiveScene().name, nbStars);
-        StartCoroutine("WaitToEnd");
-    }
-
-    IEnumerator WaitToEnd()
-    {
-        yield return new WaitForSeconds(2.5f);
         SceneManager.LoadScene("SelectLevel");
     }
 
