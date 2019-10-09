@@ -18,6 +18,18 @@ public class MenuManager : MonoBehaviour
         isSettings = false;
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            StartGame();
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            QuitGame();
+        }
+    }
+
     public void ChangeCanvas()
     {
         isSettings = !isSettings;

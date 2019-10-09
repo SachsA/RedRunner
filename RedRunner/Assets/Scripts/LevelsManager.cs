@@ -51,13 +51,22 @@ public class LevelsManager : MonoBehaviour
         AudioSource.Play();
     }
 
+    private void Update()
+    {
+        if (SceneManager.GetActiveScene().name == "GameOver" && Input.GetKeyDown(KeyCode.R))
+        {
+            ResetGame();
+            SceneManager.LoadScene("SelectLevel");
+        }
+    }
+
     #endregion
 
     #region Public Methods
 
     public void SetStarsCollected(string levelName, int nbStars)
     {
-        starsCollected.Add(levelName, nbStars);
+        starsCollected[levelName] = nbStars;
     }
 
     public void RemoveOneLife()
@@ -65,10 +74,7 @@ public class LevelsManager : MonoBehaviour
         Life -= 1;
         if (Life == 0)
         {
-            // GAME OVER SCREEN (CANVAS)
-            Life = 5;
-            starsCollected.Clear();
-            SceneManager.LoadScene("Introduction");
+            SceneManager.LoadScene("GameOver");
         }
     }
 
@@ -84,6 +90,12 @@ public class LevelsManager : MonoBehaviour
             return starsCollected[levelName];
         }
         return 0;
+    }
+
+    public void ResetGame()
+    {
+        Life = 5;
+        starsCollected.Clear();
     }
 
     #endregion

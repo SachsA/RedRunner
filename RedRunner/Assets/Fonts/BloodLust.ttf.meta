@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: eb71000ceca0ae547ac419a2b1a2fb42
+guid: efe3419016cfb814da2fc0e3cd78b6f7
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -8,12 +8,10 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: True 2D
+  fontName: Blood Lust
   fontNames:
-  - True 2D
-  fallbackFontReferences:
-  - {fileID: 12800000, guid: 4950fd134d388424a9fb3b5c267f64d9, type: 3}
-  - {fileID: 12800000, guid: 96d55aa8872460041bada43e280e063f, type: 3}
+  - Blood Lust
+  fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1

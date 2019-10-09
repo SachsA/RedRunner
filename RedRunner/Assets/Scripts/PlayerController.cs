@@ -21,6 +21,9 @@ public class PlayerController : MonoBehaviour
 
     private Vector2 SavePlayerPos;
 
+    private AudioSource audioSource;
+
+
     #endregion
 
     #region Public Fields
@@ -35,6 +38,12 @@ public class PlayerController : MonoBehaviour
     public Transform cornerMin = null;
     public Transform cornerMax = null;
 
+
+    public AudioClip drowning;
+    public AudioClip slain;
+    public AudioClip coin;
+    public AudioClip chest;
+
     #endregion
 
     #region Monobehaviour Callbacks
@@ -43,6 +52,7 @@ public class PlayerController : MonoBehaviour
     {
         _animator = GetComponent<Animator>();
         rigidbody = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Start()
@@ -93,31 +103,65 @@ public class PlayerController : MonoBehaviour
             _jump = false;
         }
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Water"))
         {
-            transform.position = SavePlayerPos;
-            LevelsManager.Instance.RemoveOneLife();
-            LevelManager.Instance.PlayerIsDead();
+            audioSource.clip = drowning;
+            audioSource.Play();
+
+            StartCoroutine("Death", drowning.length);
         }
         if (collision.CompareTag("Enemy"))
         {
-            transform.position = SavePlayerPos;
-            LevelsManager.Instance.RemoveOneLife();
-            LevelManager.Instance.PlayerIsDead();
+            audioSource.clip = slain;
+            audioSource.Play();
+
+            if (LevelsManager.Instance.GetLife() - 1 > 0)
+            {
+                StartCoroutine("Death", slain.length);
+            } else
+            {
+                LevelsManager.Instance.RemoveOneLife();
+                LevelManager.Instance.PlayerIsDead();
+            }
         }
         if (collision.CompareTag("Coin"))
         {
+            audioSource.clip = coin;
+            audioSource.Play();
             Destroy(collision.gameObject);
             LevelManager.Instance.AddOneCoin();
         }
         if (collision.CompareTag("Chest"))
         {
-            collision.GetComponent<Animator>().SetBool("Open", true);
-            LevelManager.Instance.ChestFound();
+            audioSource.clip = chest;
+            audioSource.Play();
+
+            collision.gameObject.GetComponent<Animator>().SetBool("Open", true);
+            StartCoroutine("Win", 3f);
         }
+    }
+
+    IEnumerator Death(float time)
+    {
+        GetComponent<SpriteRenderer>().enabled = false;
+        GetComponent<CapsuleCollider2D>().enabled = false;
+
+        yield return new WaitForSeconds(time);
+
+        transform.position = SavePlayerPos;
+        GetComponent<CapsuleCollider2D>().enabled = true;
+        GetComponent<SpriteRenderer>().enabled = true;
+
+        LevelsManager.Instance.RemoveOneLife();
+        LevelManager.Instance.PlayerIsDead();
+    }
+
+    IEnumerator Win(float time)
+    {
+        yield return new WaitForSeconds(time);
+        LevelManager.Instance.ChestFound();
     }
 
     #endregion

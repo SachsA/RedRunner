@@ -11,7 +11,6 @@ public class LevelManager : MonoBehaviour
     private int TotalCoins;
     private int CollectedCoins;
     private bool PlayerDeadOnce;
-    private Vector2 SavePlayerPos;
 
     private void Awake()
     {
@@ -33,10 +32,20 @@ public class LevelManager : MonoBehaviour
         CollectedCoins += 1;
     }
 
+    public int GetCollectedCoins()
+    {
+        return CollectedCoins;
+    }
+
+    public int GetTotalCoins()
+    {
+        return TotalCoins;
+    }
+
     public void ChestFound()
     {
         int nbStars = 1;
-        
+
         if (CollectedCoins == TotalCoins)
         {
             nbStars += 1;
@@ -46,12 +55,6 @@ public class LevelManager : MonoBehaviour
             nbStars += 1;
         }
         LevelsManager.Instance.SetStarsCollected(SceneManager.GetActiveScene().name, nbStars);
-        StartCoroutine("WaitToEnd");
-    }
-
-    IEnumerator WaitToEnd()
-    {
-        yield return new WaitForSeconds(2.5f);
         SceneManager.LoadScene("SelectLevel");
     }
 

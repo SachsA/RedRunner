@@ -8,12 +8,14 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="CameraFollow.cs" t="Include" />
+          <e p="DisplayUI.cs" t="Include" />
           <e p="EnterLevel.cs" t="Include" />
           <e p="Home.cs" t="Include" />
           <e p="LevelManager.cs" t="Include" />
           <e p="LevelsManager.cs" t="Include" />
           <e p="MenuManager.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
+          <e p="Saw.cs" t="Include" />
           <e p="SettingsMenu.cs" t="Include" />
           <e p="WatterCollide.cs" t="Include" />
         </e>
