@@ -117,7 +117,14 @@ public class PlayerController : MonoBehaviour
             audioSource.clip = slain;
             audioSource.Play();
 
-            StartCoroutine("Death", slain.length);
+            if (LevelsManager.Instance.GetLife() - 1 > 0)
+            {
+                StartCoroutine("Death", slain.length);
+            } else
+            {
+                LevelsManager.Instance.RemoveOneLife();
+                LevelManager.Instance.PlayerIsDead();
+            }
         }
         if (collision.CompareTag("Coin"))
         {
@@ -140,6 +147,7 @@ public class PlayerController : MonoBehaviour
     {
         GetComponent<SpriteRenderer>().enabled = false;
         GetComponent<CapsuleCollider2D>().enabled = false;
+
         yield return new WaitForSeconds(time);
 
         transform.position = SavePlayerPos;
@@ -148,7 +156,6 @@ public class PlayerController : MonoBehaviour
 
         LevelsManager.Instance.RemoveOneLife();
         LevelManager.Instance.PlayerIsDead();
-
     }
 
     IEnumerator Win(float time)

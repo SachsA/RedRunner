@@ -998,6 +998,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelManager
       objectReference: {fileID: 0}
+    - target: {fileID: 5113295902853345873, guid: fb51677aace8c1e47a0b906d3e83a50e,
+        type: 3}
+      propertyPath: TotalCoins
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 5113295902853345874, guid: fb51677aace8c1e47a0b906d3e83a50e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1052,11 +1057,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5113295902853345873, guid: fb51677aace8c1e47a0b906d3e83a50e,
-        type: 3}
-      propertyPath: TotalCoins
-      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb51677aace8c1e47a0b906d3e83a50e, type: 3}
@@ -5875,5 +5875,39 @@ PrefabInstance:
       propertyPath: levelManager
       value: 
       objectReference: {fileID: 372564300}
+    - target: {fileID: 1548238935853562387, guid: 41f0f7e060ba4b0418fab3d4dd00bea1,
+        type: 3}
+      propertyPath: coinsText
+      value: 
+      objectReference: {fileID: 1548238934896812650}
+    - target: {fileID: 1548238935853562387, guid: 41f0f7e060ba4b0418fab3d4dd00bea1,
+        type: 3}
+      propertyPath: heartsText
+      value: 
+      objectReference: {fileID: 1548238934896812649}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41f0f7e060ba4b0418fab3d4dd00bea1, type: 3}
+--- !u!114 &1548238934896812649 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1548238935127399763, guid: 41f0f7e060ba4b0418fab3d4dd00bea1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1548238934896812648}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1548238934896812650 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1548238935673598268, guid: 41f0f7e060ba4b0418fab3d4dd00bea1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1548238934896812648}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

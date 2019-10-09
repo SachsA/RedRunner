@@ -11,7 +11,6 @@ public class LevelManager : MonoBehaviour
     private int TotalCoins;
     private int CollectedCoins;
     private bool PlayerDeadOnce;
-    private Vector2 SavePlayerPos;
 
     private void Awake()
     {
