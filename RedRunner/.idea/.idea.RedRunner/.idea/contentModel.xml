@@ -8,6 +8,7 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="CameraFollow.cs" t="Include" />
+          <e p="DisplayUI.cs" t="Include" />
           <e p="EnterLevel.cs" t="Include" />
           <e p="Home.cs" t="Include" />
           <e p="LevelManager.cs" t="Include" />

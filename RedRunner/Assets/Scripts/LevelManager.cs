@@ -33,6 +33,16 @@ public class LevelManager : MonoBehaviour
         CollectedCoins += 1;
     }
 
+    public int GetCollectedCoins()
+    {
+        return CollectedCoins;
+    }
+
+    public int GetTotalCoins()
+    {
+        return TotalCoins;
+    }
+
     public void ChestFound()
     {
         int nbStars = 1;
