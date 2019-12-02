@@ -1,6 +1,6 @@
 # RedRunner
 
-##### Project done in 3D Game Basic, at KMU, South Korea
+##### Project done in 3D Game Basics, at KMU, South Korea
 
 ### The Game
 ###### Die and retry, action, plateformer game.
