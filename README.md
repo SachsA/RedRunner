@@ -18,7 +18,7 @@ Double click on it and... ! Enjoy !
 You can see our pitch *AND* the gameplay trailer at the root of the repository.
 
 #### Project realised by:
-- **Alexandre Sachs : [alexandre.sachs@epitech.eu](https://github.com/SachsA)**
+- **Alexandre Sachs : [alexandre.sachs@outlook.fr](https://github.com/SachsA)**
 - **Kellian Cipierre : [kellian.cipierre@epitech.eu](https://github.com/K6PIR)**
 - **Charles Descoust : [charles.descoust@epitech.eu](https://github.com/Artoliz)**
 - **Raphael Guy : [raphael.guy@epitech.eu](https://github.com/Rafskoz)**
